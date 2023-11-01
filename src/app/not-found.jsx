@@ -10,7 +10,7 @@ export const metadata = {
 function NotFound() {
 	const { identifier, title, message } = TEXTAPP.errors[404]
 	return (
-		<section className='bg-white dark:bg-gray-900 flex flex-1 justify-center items-center flex-col'>
+		<section className='bg-white dark:bg-gray-950 flex flex-1 justify-center items-center flex-col my-12'>
 			<div className='py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6'>
 				<div className='mx-auto max-w-screen-sm text-center'>
 					<h1 className='mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500'>

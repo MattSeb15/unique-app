@@ -5,7 +5,9 @@ import Link from 'next/link'
 
 export default function UniversitiesSection() {
 	return (
-		<section className='w-full my-5'>
+		<section
+			id='comunidades'
+			className='w-full my-5'>
 			<Card>
 				<div className='p-4 md:p-8'>
 					<h1 className='text-center text-2xl text-slate-300 my-5 mb-8  '>

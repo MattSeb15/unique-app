@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
@@ -71,6 +74,11 @@ header {
 header.scrolled {
 	@apply border-b border-gray-800;
 }
+
+#nav-hamburger {
+	transition: all 0.3s ease-in-out;
+}
+
 
 @media (prefers-color-scheme: light) {
 }

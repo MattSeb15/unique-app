@@ -9,7 +9,7 @@ function Main() {
 		<main className='flex flex-1 flex-col justify-center items-center pt-5'>
 			<PresentationSection />
 			<UniversitiesCardSection />
-			<FeatureSection />
+			<FeatureSection/>
 			<PlatformViewSection />
 			<PricingSection />
 		</main>

@@ -11,7 +11,7 @@ export const TEXTAPP = {
 			identifier: 'Error 500',
 		},
 		404: {
-			title: 'No encontrado',
+			title: 'Página no encontrada',
 			message: 'Esta no es la página web que estás buscando',
 			identifier: 'Error 404',
 		},
@@ -67,6 +67,146 @@ export const TEXTAPP = {
 				description:
 					'Participa en desafíos académicos interuniversitarios, gana premios demostrando tus conocimientos y habilidades.',
 				iconKey: 'challenges',
+			},
+		],
+	},
+	pricing: {
+		user: {
+			title: 'Membresias de Usuario',
+			description: `Unique ofrece una plataforma de acceso gratuito para todos los
+				usuarios. Sin embargo, si buscas maximizar tu experiencia y
+				aprovechar al máximo los recursos y funcionalidades disponibles, te
+				brindamos la oportunidad de adquirir una de nuestras membresías
+				premium, diseñadas para mejorar tu aprendizaje y facilitar un acceso
+				aún más completo a nuestra plataforma educativa.`,
+			plans: [
+				{
+					name: 'Free',
+					price: 0,
+					time: 'mes',
+					href: '#',
+					colorClassName: 'from-cyan-500 to-blue-500',
+					features: [
+						'Ventaja 1',
+						'Ventaja 2',
+						'Ventaja 3',
+						'Ventaja 4',
+						'Ventaja 5',
+					],
+				},
+				{
+					name: 'Premium',
+					price: 10,
+					time: 'mes',
+					href: '#',
+					colorClassName: 'from-purple-600 to-blue-500',
+					features: [
+						'Ventaja 1',
+						'Ventaja 2',
+						'Ventaja 3',
+						'Ventaja 4',
+						'Ventaja 5',
+					],
+				},
+				{
+					name: 'Premium+',
+					price: 20,
+					time: 'mes',
+					href: '#',
+					colorClassName: 'from-pink-500 to-orange-400',
+					features: [
+						'Ventaja 1',
+						'Ventaja 2',
+						'Ventaja 3',
+						'Ventaja 4',
+						'Ventaja 5',
+					],
+				},
+			],
+		},
+		comunity: {
+			title: 'Mejoras de Comunidad',
+			description: `Maximizar tu experiencia, aprovechar al máximo los recursos y
+				funcionalidades disponibles para la comunidad, obten beneficios
+				premium al adquirir una de nuestras mejoras para la comunidad,
+				diseñadas para mejorar tu comunidad y facilitar un acceso aún más
+				completo a nuestra plataforma educativa.`,
+			plans: [
+				{
+					name: 'Free',
+					price: 0,
+					time: 'mes',
+					href: '#',
+					colorClassName: 'from-cyan-500 to-blue-500',
+					features: [
+						'Ventaja 1',
+						'Ventaja 2',
+						'Ventaja 3',
+						'Ventaja 4',
+						'Ventaja 5',
+					],
+				},
+				{
+					name: 'Premium',
+					price: 10,
+					time: 'mes',
+					href: '#',
+					colorClassName: 'from-purple-600 to-blue-500',
+					features: [
+						'Ventaja 1',
+						'Ventaja 2',
+						'Ventaja 3',
+						'Ventaja 4',
+						'Ventaja 5',
+					],
+				},
+				{
+					name: 'Premium+',
+					price: 20,
+					time: 'mes',
+					href: '#',
+					colorClassName: 'from-pink-500 to-orange-400',
+					features: [
+						'Ventaja 1',
+						'Ventaja 2',
+						'Ventaja 3',
+						'Ventaja 4',
+						'Ventaja 5',
+					],
+				},
+			],
+		},
+	},
+	header: {
+		links: [
+			{
+				name: 'Inicio',
+				href: 'inicio',
+			},
+			{
+				name: 'Comunidades',
+				href: 'comunidades',
+			},
+			{
+				name: 'Servicios',
+				href: 'servicios',
+			},
+			{
+				name: 'Plataforma',
+				href: 'plataforma',
+			},
+			{
+				name: 'Desafíos',
+				href: 'desafios',
+			},
+
+			{
+				name: 'Unique+',
+				href: 'uniqueplus',
+			},
+			{
+				name: 'Contacto',
+				href: 'contacto',
 			},
 		],
 	},
