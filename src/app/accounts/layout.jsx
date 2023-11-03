@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<body className='flex'>
-			<div className='grid grid-cols-1 grid-rows-1 gap-0 place-items-center place-content-center sm:grid-cols-2 sm:grid-rows-1'>
+			<div className='grid grid-cols-1 w-full grid-rows-1 gap-0 place-items-center place-content-center sm:grid-cols-2 sm:grid-rows-1'>
 				<section className='flex flex-col w-full h-full items-center justify-center'>
 					{children}
 				</section>

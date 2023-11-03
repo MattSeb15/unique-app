@@ -216,4 +216,12 @@ export const TEXTAPP = {
 		sloganDescription:
 			'¡Explora un mundo de conocimiento! Inicia sesión o regístrate para sumergirte en una experiencia educativa única y enriquecedora a tu alcance.',
 	},
+	sidebar: [
+		{ name: 'Inicio', route: '' },
+		{ name: 'Preguntas', route: 'preguntas' },
+		{ name: 'Comunidad', route: 'comunidad' },
+		{ name: 'Repositorios', route: 'repositorios' },
+		{ name: 'Cursos', route: 'cursos' },
+		{ name: 'Desafios', route: 'desafios' },
+	],
 }

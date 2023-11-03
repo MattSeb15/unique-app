@@ -19,14 +19,14 @@ export default function Footer() {
 								<li className='mb-4'>
 									<a
 										href='https://flowbite.com'
-										className='hover:underline'>
+										className='hover:underline text-white font-light'>
 										Flowbite
 									</a>
 								</li>
 								<li>
 									<a
 										href='https://tailwindcss.com/'
-										className='hover:underline'>
+										className='hover:underline text-white font-light'>
 										Tailwind CSS
 									</a>
 								</li>
@@ -40,14 +40,14 @@ export default function Footer() {
 								<li className='mb-4'>
 									<a
 										href='https://github.com/themesberg/flowbite'
-										className='hover:underline '>
+										className='hover:underline text-white font-light'>
 										Github
 									</a>
 								</li>
 								<li>
 									<a
 										href='https://discord.gg/4eeurUVvTy'
-										className='hover:underline'>
+										className='hover:underline text-white font-light'>
 										Discord
 									</a>
 								</li>
@@ -61,14 +61,14 @@ export default function Footer() {
 								<li className='mb-4'>
 									<a
 										href='#'
-										className='hover:underline'>
+										className='hover:underline  text-white font-light'>
 										Privacy Policy
 									</a>
 								</li>
 								<li>
 									<a
 										href='#'
-										className='hover:underline'>
+										className='hover:underline text-white font-light'>
 										Terms &amp; Conditions
 									</a>
 								</li>

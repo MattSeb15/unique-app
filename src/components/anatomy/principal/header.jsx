@@ -6,16 +6,18 @@ import UniqueLink from '../../links/uniqueLink'
 export default function PrincipalHeader() {
 	return (
 		<>
-			<header className='sticky top-0 w-full z-10 scrolled'>
+			<header className='sticky top-0 w-full z-10 scrolled bg-slate-900'>
 				<div
 					className=' flex items-center justify-between p-2 px-8'
 					aria-label='Global'>
-					<nav className='flex items-center w-fit xl:w-2/5'>
+					<nav className='flex flex-1 items-center'>
 						<UniqueLink />
+					</nav>
+					<nav className='flex-1'>
 						<SearchForm />
 					</nav>
 
-					<nav className='flex xl:flex-1 lg:justify-end'>
+					<nav className='flex flex-1 lg:justify-end'>
 						<div className='hidden lg:flex items-center sm:gap-x-4 mr-3 lg:gap-x-7 xl:mr-10 lg:mr-0'>
 							{/* {TEXTAPP.header.links.map((link, index) => (
 								<Link

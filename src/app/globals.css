@@ -44,7 +44,9 @@ html {
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#234465", GradientType=1);
 } */
-
+input {
+	outline: none;
+}
 a {
 	font-weight: 500;
 	text-decoration: inherit;
