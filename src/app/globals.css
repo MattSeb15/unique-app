@@ -25,7 +25,7 @@ html {
 	background: #192640;
 }
 
-.body-bg {
+/* .body-bg {
 	background: rgb(0, 0, 0);
 	background: -moz-linear-gradient(
 		0deg,
@@ -43,7 +43,7 @@ html {
 		rgba(35, 68, 101, 1) 100%
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#234465", GradientType=1);
-}
+} */
 
 a {
 	font-weight: 500;
@@ -51,7 +51,7 @@ a {
 }
 
 a:hover {
-	color: #758bcc;
+	@apply text-blue-200;
 }
 
 body {
@@ -79,6 +79,100 @@ header.scrolled {
 	transition: all 0.3s ease-in-out;
 }
 
-
 @media (prefers-color-scheme: light) {
+}
+
+Image {
+	width: auto;
+	height: auto;
+}
+
+a {
+	@apply text-blue-500;
+}
+
+.bg-lines {
+	background: radial-gradient(
+				35.36% 35.36% at 100% 25%,
+				#0000 66%,
+				rgba(26, 72, 198, 0.89) 68% 70%,
+				#0000 72%
+			)
+			100px 100px / calc(2 * 100px) calc(2 * 100px),
+		radial-gradient(
+				35.36% 35.36% at 0 75%,
+				#0000 66%,
+				rgba(26, 72, 198, 0.89) 68% 70%,
+				#0000 72%
+			)
+			100px 100px / calc(2 * 100px) calc(2 * 100px),
+		radial-gradient(
+				35.36% 35.36% at 100% 25%,
+				#0000 66%,
+				rgba(26, 72, 198, 0.89) 68% 70%,
+				#0000 72%
+			)
+			0 0 / calc(2 * 100px) calc(2 * 100px),
+		radial-gradient(
+				35.36% 35.36% at 0 75%,
+				#0000 66%,
+				rgba(26, 72, 198, 0.89) 68% 70%,
+				#0000 72%
+			)
+			0 0 / calc(2 * 100px) calc(2 * 100px),
+		repeating-conic-gradient(#1d4ed8 0 25%, #0000 0 50%) 0 0 / calc(2 * 100px)
+			calc(2 * 100px),
+		radial-gradient(#0000 66%, rgba(26, 72, 198, 0.89) 68% 70%, #0000 72%) 0
+			calc(100px / 2) / 100px 100px #1d4ed8;
+}
+
+.bg-nested-cubes {
+	background: conic-gradient(
+			from 0deg at calc(500% / 6) calc(100% / 3),
+			rgba(193, 207, 245, 0.39) 0 120deg,
+			#0000 0
+		),
+		conic-gradient(
+			from -120deg at calc(100% / 6) calc(100% / 3),
+			rgba(104, 138, 232, 0.39) 0 120deg,
+			#0000 0
+		),
+		conic-gradient(
+			from 120deg at calc(100% / 3) calc(500% / 6),
+			rgba(31, 77, 203, 0.39) 0 120deg,
+			#0000 0
+		),
+		conic-gradient(
+			from 120deg at calc(200% / 3) calc(500% / 6),
+			rgba(31, 77, 203, 0.39) 0 120deg,
+			#0000 0
+		),
+		conic-gradient(
+			from -180deg at calc(100% / 3) 50%,
+			rgba(104, 138, 232, 0.39) 60deg,
+			rgba(31, 77, 203, 0.39) 0 120deg,
+			#0000 0
+		),
+		conic-gradient(
+			from 60deg at calc(200% / 3) 50%,
+			rgba(31, 77, 203, 0.39) 60deg,
+			rgba(193, 207, 245, 0.39) 0 120deg,
+			#0000 0
+		),
+		conic-gradient(
+			from -60deg at 50% calc(100% / 3),
+			rgba(31, 77, 203, 0.39) 120deg,
+			rgba(104, 138, 232, 0.39) 0 240deg,
+			rgba(193, 207, 245, 0.39) 0
+		);
+	background-size: 128px 74px;
+}
+.bg-curves {
+	background-image: repeating-radial-gradient(
+			circle at 0 100%,
+			transparent 0,
+			#1d4ed8 100px
+		),
+		repeating-linear-gradient(rgba(26, 72, 198, 0.89), rgba(26, 72, 198, 0.89));
+	background-color: #1d4ed8;
 }

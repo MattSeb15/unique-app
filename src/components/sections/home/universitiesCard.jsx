@@ -20,7 +20,7 @@ export default function UniversitiesSection() {
 								className='flex flex-col items-center '>
 								<Image
 									src={university.src}
-									className='h-20 object-contain invert'
+									className='h-20 object-contain invert w-auto '
 									width={150}
 									height={100}
 									alt=''
@@ -35,7 +35,7 @@ export default function UniversitiesSection() {
 						<div className='flex flex-col items-center justify-center'>
 							<Link href='/'>
 								{' '}
-								<dt className='mb-2 text-3xl text-center font-extrabold'>
+								<dt className='mb-2 text-3xl text-center text-white font-extrabold'>
 									Explorar
 								</dt>
 								<dd className='text-gray-400 text-center text-lg font-thin max-w-80 '>

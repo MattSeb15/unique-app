@@ -210,4 +210,10 @@ export const TEXTAPP = {
 			},
 		],
 	},
+	accounts: {
+		sloganTitle:
+			'Accede o Regístrate para una experiencia educativa transformadora.',
+		sloganDescription:
+			'¡Explora un mundo de conocimiento! Inicia sesión o regístrate para sumergirte en una experiencia educativa única y enriquecedora a tu alcance.',
+	},
 }

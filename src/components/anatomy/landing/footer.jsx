@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import UniqueLink from '../links/uniqueLink'
+import UniqueLink from '../../links/uniqueLink'
 
 export default function Footer() {
 	const currentYear = new Date().getFullYear()

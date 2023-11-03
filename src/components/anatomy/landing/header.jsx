@@ -1,9 +1,9 @@
 'use client'
 
 import { useEffect } from 'react'
-import UniqueLink from '../links/uniqueLink'
+import UniqueLink from '../../links/uniqueLink'
 import Link from 'next/link'
-import SocialBtnGroup from '../buttons/groups/socialBtnGroup'
+import SocialBtnGroup from '../../buttons/groups/socialBtnGroup'
 
 import { TEXTAPP } from '@/constants/textApp'
 
@@ -49,7 +49,7 @@ function Header() {
 						<SocialBtnGroup />
 						<Link
 							className=' inline-flex items-center text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-1 md:ml-3'
-							href='/login/'>
+							href='/accounts/login'>
 							<span className='inline'>Ingresar</span>
 							<svg
 								className='w-3 h-3 ml-2 inline'

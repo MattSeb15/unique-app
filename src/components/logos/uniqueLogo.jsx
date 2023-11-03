@@ -4,6 +4,7 @@ function UniqueLogo({ width, height, className }) {
 	return (
 		<Image
 			src='/assets/images/logo.avif'
+			priority={true}			
 			width={width ?? 50}
 			height={height ?? 50}
 			className={className}

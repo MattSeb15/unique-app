@@ -13,13 +13,14 @@ export default function SearchForm({
 
 		searchForm.addEventListener('submit', e => {
 			e.preventDefault()
+			console.log(e.target[0].value)
 		})
 	}, [])
 
 	return (
 		<form>
 			<label
-				for={formId}
+				htmlFor={formId}
 				className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'>
 				{searchLabel}
 			</label>

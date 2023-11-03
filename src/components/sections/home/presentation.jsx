@@ -18,11 +18,11 @@ export default function PresentationSection() {
 			<StartExploreGroupBtn />
 
 			<UniqueLogo
-				className='hidden xl:block lg:h-auto'
+				className='hidden xl:block h-auto'
 				width={500}
 			/>
 			<UniqueLogo
-				className='block xl:hidden lg:h-auto'
+				className='block xl:hidden h-auto'
 				width={250}
 			/>
 		</section>
