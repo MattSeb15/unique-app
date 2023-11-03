@@ -181,32 +181,32 @@ export const TEXTAPP = {
 		links: [
 			{
 				name: 'Inicio',
-				href: 'inicio',
+				href: '#inicio',
 			},
 			{
 				name: 'Comunidades',
-				href: 'comunidades',
+				href: '#comunidades',
 			},
 			{
 				name: 'Servicios',
-				href: 'servicios',
+				href: '#servicios',
 			},
 			{
 				name: 'Plataforma',
-				href: 'plataforma',
+				href: '#plataforma',
 			},
 			{
 				name: 'Desafíos',
-				href: 'desafios',
+				href: '#desafios',
 			},
 
 			{
 				name: 'Unique+',
-				href: 'uniqueplus',
+				href: '#uniqueplus',
 			},
 			{
 				name: 'Contacto',
-				href: 'contacto',
+				href: '#contacto',
 			},
 		],
 	},

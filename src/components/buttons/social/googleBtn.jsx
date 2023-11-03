@@ -1,10 +1,14 @@
 'use client'
-export default function GoogleBtn({ onClick = () => {}, text='Ingresar con Google' }) {
+export default function GoogleBtn({
+	onClick = () => {},
+	text = 'Ingresar con Google',
+	className = '',
+}) {
 	return (
 		<button
 			type='button'
 			onClick={onClick}
-			className=' text-white bg-[#db4a39] hover:bg-[#db4a39]/90 focus:ring-4 focus:outline-none focus:ring-[#db4a39]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#db4a39]/55 mb-2'>
+			className={`text-white bg-[#db4a39] hover:bg-[#db4a39]/90 focus:ring-4 focus:outline-none focus:ring-[#db4a39]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#db4a39]/55 mb-2 ${className}`}>
 			<svg
 				className='w-4 h-4 mr-2'
 				aria-hidden='true'

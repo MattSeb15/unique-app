@@ -4,10 +4,10 @@ import Header from '@/components/anatomy/landing/header'
 
 export default function UniqueLanding() {
 	return (
-		<>
+		<body>
 			<Header />
 			<Main />
 			<Footer />
-		</>
+		</body>
 	)
 }

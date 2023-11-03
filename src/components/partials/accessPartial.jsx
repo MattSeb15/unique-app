@@ -27,13 +27,15 @@ export default function AccessPartial({ isRegister = false }) {
 						<p className='mb-1 text-gray-500'>o</p>
 						<Hr className='flex-1' />
 					</div>
-					<div className='flex flex-col w-full'>
+					<div className='flex flex-col xl:flex-row w-full xl:gap-7'>
 						<GoogleBtn
+							className='flex-1'
 							text={
 								isRegister ? 'Crear cuenta con Google' : 'Ingresar con Google'
 							}
 						/>
 						<FacebookBtn
+							className='flex-1'
 							text={
 								isRegister
 									? 'Crear cuenta con Facebook'

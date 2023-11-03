@@ -9,7 +9,7 @@ export default function StartExploreGroupBtn() {
 				Registrate ahora
 			</Link>
 			<Link
-				href='#services'
+				href='#servicios'
 				className='text-gray-600 bg-white-100 hover:bg-gray-100 hover:text-blue-600 border border-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:border-gray-700 font-medium rounded-lg text-base px-6 py-2.5 text-center inline-flex justify-center items-center'>
 				<svg
 					className='w-3.5 h-3.5 mr-1'

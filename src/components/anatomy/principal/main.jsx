@@ -1,3 +1,3 @@
 export default function PrincipalMain() {
-	return <>adsadas</>
+	return <h1>U principal</h1>
 }

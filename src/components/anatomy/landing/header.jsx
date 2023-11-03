@@ -40,7 +40,7 @@ function Header() {
 							{TEXTAPP.header.links.map((link, index) => (
 								<Link
 									key={index}
-									href={`#${link.href}`}
+									href={link.href}
 									className='text-sm font-medium text-gray-900 dark:text-gray-300'>
 									{link.name}
 								</Link>
@@ -74,7 +74,7 @@ function Header() {
 						{TEXTAPP.header.links.map((link, index) => (
 							<li key={index}>
 								<Link
-									href={`#${link.href}`}
+									href={link.href}
 									className='block py-2 pl-3 pr-4 font-medium text-gray-900 dark:text-gray-300 '>
 									{link.name}
 								</Link>

@@ -5,9 +5,7 @@ import StartExploreGroupBtn from '@/components/buttons/groups/startExploreGroupB
 
 export default function PresentationSection() {
 	return (
-		<section
-			id='inicio'
-			className='flex flex-col items-center justify-center my-2 snap-mandatory snap-y scroll-start'>
+		<section className='flex flex-col items-center justify-center my-2 snap-mandatory snap-y scroll-start'>
 			<h1 className='text-4xl lg:text-5xl mt-4 xl:mt-10 font-extrabold text-white text-center max-w-[90%] lg:max-w-[60%]'>
 				{TEXTAPP.slogan}
 			</h1>

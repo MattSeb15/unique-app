@@ -65,8 +65,8 @@ export default function RegisterForm() {
 					</div>
 					<div class='ml-3 text-sm'>
 						<label
-							for='acceptTermsAndCondition'
-							class='font-light text-gray-500 dark:text-gray-300'>
+							htmlFor='acceptTermsAndCondition'
+							className='font-light text-gray-500 dark:text-gray-300'>
 							Al registrarte, estás creando una cuenta en Unique y aceptas los{' '}
 							<Link
 								class='font-medium text-primary-600 hover:underline dark:text-primary-500'
