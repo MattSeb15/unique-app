@@ -1,5 +1,7 @@
 import SearchForm from '@/components/forms/search'
 import UniqueLink from '../../links/uniqueLink'
+import AvatarCard from '@/components/users/avatarCard'
+import PrincipalBellDuotoneIcon from '@/components/icons/principalHeader/bell'
 
 /* import { TEXTAPP } from '@/constants/textApp' */
 
@@ -10,40 +12,17 @@ export default function PrincipalHeader() {
 				<div
 					className=' flex items-center justify-between p-2 px-8'
 					aria-label='Global'>
-					<nav className='flex flex-1 items-center'>
-						<UniqueLink />
+					<nav className='flex flex-0 sm:flex-1 mr-5 sm:mr-0 items-center'>
+						<UniqueLink textClassName='hidden sm:block' />
 					</nav>
 					<nav className='flex-1'>
 						<SearchForm />
 					</nav>
 
-					<nav className='flex flex-1 lg:justify-end'>
-						<div className='hidden lg:flex items-center sm:gap-x-4 mr-3 lg:gap-x-7 xl:mr-10 lg:mr-0'>
-							{/* {TEXTAPP.header.links.map((link, index) => (
-								<Link
-									key={index}
-									href={`#${link.href}`}
-									className='text-sm font-medium text-gray-900 dark:text-gray-300'>
-									{link.name}
-								</Link>
-							))} */}
-						</div>
+					<nav className='flex flex-1 justify-end items-center'>
+						<PrincipalBellDuotoneIcon className='w-8 h-8' />
+						<AvatarCard />
 					</nav>
-				</div>
-				<div
-					className='lg:hidden w-full'
-					id='nav-hamburger'>
-					<ul className='flex flex-row item-center justify-center font-medium my-1  bg-gray-50 dark:bg-gray-950  flex-wrap'>
-						{/* {TEXTAPP.header.links.map((link, index) => (
-							<li key={index}>
-								<Link
-									href={`#${link.href}`}
-									className='block py-2 pl-3 pr-4 font-medium text-gray-900 dark:text-gray-300 '>
-									{link.name}
-								</Link>
-							</li>
-						))} */}
-					</ul>
 				</div>
 			</header>
 		</>

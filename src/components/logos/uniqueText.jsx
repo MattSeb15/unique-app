@@ -4,12 +4,14 @@ function UniqueText({
 	fill = '#fff',
 	stroke = 'none',
 	strokeWidth = '1',
+	className = '',
 }) {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
 			width={width}
 			height={height}
+			className={className}
 			viewBox='0 0 625 188'>
 			<path
 				fill={fill}

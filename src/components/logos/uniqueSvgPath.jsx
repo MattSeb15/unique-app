@@ -4,12 +4,14 @@ function UniqueSvgPath({
 	fill = '#fff',
 	stroke = '#000',
 	strokeWidth = '1',
+	className = '',
 }) {
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
 			width={width}
 			height={height}
+			className={className}
 			viewBox='0 0 625 625'>
 			<path
 				id='Ruta importada'
