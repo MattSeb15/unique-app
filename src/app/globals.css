@@ -180,3 +180,25 @@ a {
 		repeating-linear-gradient(rgba(26, 72, 198, 0.89), rgba(26, 72, 198, 0.89));
 	background-color: #1d4ed8;
 }
+
+.bg-primary {
+	background-color: #1d4ed8;
+}
+.text-primary {
+	color: #1d4ed8;
+}
+
+.text-overflow-2 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+.text-overflow-1 {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1; /* number of lines to show */
+	-webkit-box-orient: vertical;
+}
