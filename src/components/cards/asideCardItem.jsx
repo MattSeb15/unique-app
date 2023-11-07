@@ -1,6 +1,6 @@
 'use client'
 import IconLinkText from '../links/iLinkText'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 
 export default function AsideCardItem({
 	children,
@@ -8,9 +8,7 @@ export default function AsideCardItem({
 	text = 'placeholder',
 }) {
 	const path = usePathname()
-	const params = useSearchParams()
-	console.log(params)
-	console.log(path)
+
 	const isActive = path === href
 	return (
 		<div className='flex items-end flex-col'>

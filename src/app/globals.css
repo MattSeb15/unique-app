@@ -202,3 +202,11 @@ a {
 	-webkit-line-clamp: 1; /* number of lines to show */
 	-webkit-box-orient: vertical;
 }
+
+.bg-question-card {
+	background-color: #0f172a;
+}
+
+.pricy-border {
+	border: 1px solid goldenrod;
+}
