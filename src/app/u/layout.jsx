@@ -1,35 +1,36 @@
-import PrincipalHeader from '@/components/anatomy/principal/header'
-import Footer from '@/components/anatomy/landing/footer'
-
 import AsideCardItem from '@/components/cards/asideCardItem'
 import { TEXTAPP } from '@/constants/textApp'
 import ConditionalIcon from '@/components/icons/asaid/conditionalAside'
+import UniqueLink from '@/components/links/uniqueLink'
 
 export default function RootLayout({ children }) {
 	return (
-		<body className='flex flex-col'>
-			<PrincipalHeader />
-			<div className='flex flex-1'>
-				<aside className='flex flex-1 bg-slate-900'>
-					<div className='w-full py-2 flex flex-col gap-2'>
-						{TEXTAPP.sidebar.map((link, index) => (
-							<AsideCardItem
-								key={index}
-								text={link.name}
-								href={`${link.route}`}>
-								<ConditionalIcon
-									icon={link.name}
-									className='mr-0 sm:mr-3 w-5 h-auto inline'
-								/>
-							</AsideCardItem>
-						))}
-					</div>
-				</aside>
-				<main className='flex flex-[5]'>
-					<div className='px-7 py-5 flex h-full w-full gap-5'>{children}</div>
-				</main>
-			</div>
-			<Footer />
+		<body className='flex flex-col sm:flex sm:flex-row  mx-auto'>
+			<header className='flex sticky shadow-lg top-0 z-40 sm:flex-1 sm:flex-col bg-slate-900 sm:min-w-[50px] sm:sticky sm:top-0 sm:left-0 sm:h-screen '>
+				<UniqueLink
+					textClassName='hidden lg:flex'
+					className='flex justify-end items-center lg:justify-center mx-1 sm:mt-3'
+				/>
+				<div className='w-full sm:py-2 flex items-end sm:flex-col'>
+					{TEXTAPP.sidebar.map((link, index) => (
+						<AsideCardItem
+							key={index}
+							text={link.name}
+							href={`${link.route}`}>
+							<ConditionalIcon
+								icon={link.name}
+								className='mr-0 lg:mr-3 w-5 sm:w-7 h-auto inline'
+							/>
+						</AsideCardItem>
+					))}
+				</div>
+			</header>
+			<main className='flex sm:flex-[5]'>
+				<div className='px-1 sm:px-7 py-5 flex h-full w-full gap-5'>
+					{children}
+				</div>
+			</main>
+			{/* <Footer /> */}
 		</body>
 	)
 }

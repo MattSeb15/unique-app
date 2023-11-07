@@ -13,7 +13,7 @@ export default function ConditionalIcon({ icon = '', className = '' }) {
 		Cursos: <AsaidIconCourses className={className} />,
 		Comunidad: <AsaidIconCommunity className={className} />,
 		Inicio: <AsaidIconHome className={className} />,
-		Repositorios: <AsaidIconRepo className={className} />,
+		Biblioteca: <AsaidIconRepo className={className} />,
 		Tienda: <AsaidIconShoppingCart className={className} />,
 	}
 

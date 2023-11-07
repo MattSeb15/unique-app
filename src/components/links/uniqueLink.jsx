@@ -3,11 +3,15 @@ import React from 'react'
 import UniqueSvgPath from '../logos/uniqueSvgPath'
 import UniqueText from '../logos/uniqueText'
 
-export default function UniqueLink({ logoClassName = '', textClassName = '' }) {
+export default function UniqueLink({
+	logoClassName = '',
+	textClassName = '',
+	className = 'flex items-center',
+}) {
 	return (
 		<Link
 			href='/'
-			className='flex items-center'>
+			className={className}>
 			<span className='sr-only'>Unique Logo</span>
 			<UniqueSvgPath
 				width='60px'

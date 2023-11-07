@@ -7,7 +7,7 @@ export default function IconLinkText(props) {
 			href={props?.href}
 			{...props}>
 			{props?.children}
-			<p className='mt-2 mr-0 lg:mr-5 text-sm lg:text-md hidden md:inline'>
+			<p className='mt-2 mr-0 lg:mr-5 text-sm lg:text-md hidden lg:inline'>
 				{props?.text}
 			</p>
 		</Link>

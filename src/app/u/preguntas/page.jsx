@@ -65,27 +65,10 @@ export default function PreguntasPage() {
 							question={question}
 						/>
 					))}
-					{listOfQuestions.map(question => (
-						<QuestionCardItem
-							key={question.id}
-							question={question}
-						/>
-					))}
-					{listOfQuestions.map(question => (
-						<QuestionCardItem
-							key={question.id}
-							question={question}
-						/>
-					))}
-					{listOfQuestions.map(question => (
-						<QuestionCardItem
-							key={question.id}
-							question={question}
-						/>
-					))}
+					<div className='h-[500px] w-full'></div>
 				</div>
 			</div>
-			<div className='flex flex-1'>
+			<div className='hidden sm:flex sm:flex-1'>
 				<div className={`h-full w-full ${bg} rounded-md`}></div>
 			</div>
 		</>

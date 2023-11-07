@@ -33,12 +33,12 @@ export default function QuestionCardItem({ question }) {
 					<h2
 						className={`${
 							question.isPriced ? 'text-amber-500' : 'text-blue-500'
-						} text-xl font-semibold text-overflow-1 w-[95%]`}>
+						} text-md md:text-xl font-semibold text-overflow-1 w-[95%]`}>
 						{question.title ?? 'Title'}
 					</h2>
 				</Link>
 				<p
-					className={`text-sm overflow-hidden text-ellipsis font-medium w-[95%] ${
+					className={`text-xs md:text-sm overflow-hidden text-ellipsis font-medium w-[95%] ${
 						question.isPriced ? 'text-amber-100' : 'text-gray-400'
 					} text-overflow-2`}>
 					{question.description ?? 'Description'}
@@ -53,7 +53,7 @@ export default function QuestionCardItem({ question }) {
 						</LiTagCard>
 					))}
 				</ul>
-				<div className='flex justify-between mt-2'>
+				<div className='flex gap-2 lg:gap-0 flex-col lg:flex-row justify-between mt-2'>
 					<div className='flex gap-2'>
 						<IconText
 							color={question.isResolved ? 'green-500' : 'gray-200'}
@@ -69,7 +69,9 @@ export default function QuestionCardItem({ question }) {
 					</div>
 					<div className='flex gap-3'>
 						<UserQuestionCard ownerId={question.ownerId} />
-						<p className='text-xs text-gray-400'>{question.getParseDate()}</p>
+						<p className='text-xs text-gray-400 truncate'>
+							{question.getParseDate()}
+						</p>
 					</div>
 				</div>
 			</div>

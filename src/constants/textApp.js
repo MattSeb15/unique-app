@@ -217,13 +217,13 @@ export const TEXTAPP = {
 			'¡Explora un mundo de conocimiento! Inicia sesión o regístrate para sumergirte en una experiencia educativa única y enriquecedora a tu alcance.',
 	},
 	sidebar: [
-		{ name: 'Inicio', route: '/u' },
+		{ name: 'Inicio', route: '/u/inicio' },
 		{ name: 'Preguntas', route: '/u/preguntas' },
 		{ name: 'Comunidad', route: '/u/comunidad' },
-		{ name: 'Repositorios', route: '/u/repositorios' },
+		{ name: 'Biblioteca', route: '/u/biblioteca' },
 		{ name: 'Cursos', route: '/u/cursos' },
 		{ name: 'Desafíos', route: '/u/desafios' },
-		{ name: 'Tienda', route: '/u/shop' },
+		{ name: 'Tienda', route: '/u/mercado' },
 	],
 	questions: {
 		filters: [

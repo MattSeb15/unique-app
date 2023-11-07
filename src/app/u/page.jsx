@@ -1,5 +1,5 @@
-import PrincipalMain from '@/components/anatomy/principal/main'
+import { redirect } from 'next/navigation'
 
-export default function UniquePrincipal() {
-	return <PrincipalMain />
+export default function UPage() {
+	redirect('/u/inicio')
 }
