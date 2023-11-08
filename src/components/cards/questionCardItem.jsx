@@ -29,6 +29,7 @@ export default function QuestionCardItem({ question }) {
 							? 'decoration-amber-500'
 							: 'decoration-blue-500 mt-1'
 					} `}
+					title={question.title ?? 'Title'}
 					href={`/u/preguntas/${question.id}`}>
 					<h2
 						className={`${

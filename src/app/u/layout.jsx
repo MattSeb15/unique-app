@@ -25,11 +25,7 @@ export default function RootLayout({ children }) {
 					))}
 				</div>
 			</header>
-			<main className='flex sm:flex-[5]'>
-				<div className='px-1 sm:px-7 py-5 flex h-full w-full gap-5'>
-					{children}
-				</div>
-			</main>
+			<main className='flex sm:flex-[5]'>{children}</main>
 			{/* <Footer /> */}
 		</body>
 	)
