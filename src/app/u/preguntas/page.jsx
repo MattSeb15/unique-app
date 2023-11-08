@@ -3,7 +3,8 @@ import React from 'react'
 import Question from '@/constants/classes/question'
 import QuestionTagLink from '@/components/links/qtagLink'
 
-export default function PreguntasPage() {
+export default function PreguntasPage({ searchParams }) {
+	console.log(searchParams)
 	const listOfQuestions = [
 		new Question()
 			.setId(1)

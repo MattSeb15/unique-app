@@ -9,7 +9,7 @@ export default function AsideCardItem({
 }) {
 	const path = usePathname()
 
-	const isActive = path === href
+	const isActive = path.startsWith(href)
 	return (
 		<div className='flex items-end flex-col sm:w-full'>
 			<IconLinkText

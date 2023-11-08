@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 
 export default function ITextHead({ links = [] }) {
 	const path = usePathname()
-	const getIsActive = href => path === href
+	const getIsActive = href => path.startsWith(href)
 
 	return (
 		<>
