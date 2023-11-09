@@ -14,7 +14,7 @@ export default function ConditionalIcon({ icon = '', className = '' }) {
 		Comunidad: <AsaidIconCommunity className={className} />,
 		Inicio: <AsaidIconHome className={className} />,
 		Biblioteca: <AsaidIconRepo className={className} />,
-		Tienda: <AsaidIconShoppingCart className={className} />,
+		Mercado: <AsaidIconShoppingCart className={className} />,
 	}
 
 	return <>{icons[icon]}</>

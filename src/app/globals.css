@@ -47,14 +47,14 @@ html {
 input {
 	outline: none;
 }
+select {
+	outline: none;
+}
 a {
 	font-weight: 500;
 	text-decoration: inherit;
 }
 
-a:hover {
-	@apply text-blue-200;
-}
 img {
 	height: auto;
 	width: auto;
@@ -94,7 +94,9 @@ Image {
 a {
 	@apply text-blue-500;
 }
-
+a:hover {
+	@apply text-blue-200;
+}
 .bg-lines {
 	background: radial-gradient(
 				35.36% 35.36% at 100% 25%,

@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
 			<header className='flex sticky shadow-lg top-0 z-40 sm:flex-1 sm:flex-col bg-slate-900 sm:min-w-[50px] sm:sticky sm:top-0 sm:left-0 sm:h-screen '>
 				<UniqueLink
 					textClassName='hidden lg:flex'
-					className='flex justify-end items-center lg:justify-center mx-1 sm:mt-3'
+					className='flex justify-end items-center lg:justify-start mx-1 xl:ml-5 sm:mt-3'
 				/>
 				<div className='w-full sm:py-2 flex items-end sm:flex-col'>
 					{TEXTAPP.sidebar.map((link, index) => (

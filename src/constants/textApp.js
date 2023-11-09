@@ -223,7 +223,7 @@ export const TEXTAPP = {
 		{ name: 'Biblioteca', route: '/u/biblioteca' },
 		{ name: 'Cursos', route: '/u/cursos' },
 		{ name: 'Desafíos', route: '/u/desafios' },
-		{ name: 'Tienda', route: '/u/mercado' },
+		{ name: 'Mercado', route: '/u/mercado' },
 	],
 	questions: {
 		filters: [
