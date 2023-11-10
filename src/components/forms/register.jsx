@@ -1,9 +1,21 @@
+'use client'
 import Link from 'next/link'
-import FilledButton from '../buttons/filledButton'
+import ButtonFilledSubmit from '../buttons/filledSubmit'
 
 export default function RegisterForm() {
+	const handleSubmit = e => {
+		e.preventDefault()
+		const email = e.target[0].value
+		const password = e.target[1].value
+		const passwordConfirm = e.target[2].value
+
+		console.log(email, password, passwordConfirm)
+		e.target.reset()
+	}
+
 	return (
 		<form
+			onSubmit={e => handleSubmit(e)}
 			className='space-y-6'
 			action='#'>
 			<div>
@@ -57,10 +69,11 @@ export default function RegisterForm() {
 					<div className='flex items-center h-5'>
 						<input
 							id='acceptTermsAndCondition'
+							name='acceptTermsAndCondition'
 							aria-describedby='acceptTermsAndCondition'
 							type='checkbox'
 							className='w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800'
-							required=''
+							required
 						/>
 					</div>
 					<div className='ml-3 text-sm'>
@@ -85,7 +98,8 @@ export default function RegisterForm() {
 				</div>
 			</div>
 
-			<FilledButton text='Crear cuenta' />
+			{/* <FilledButton text='Crear cuenta' /> */}
+			<ButtonFilledSubmit>Crear cuenta</ButtonFilledSubmit>
 
 			<div className='flex w-full justify-between'>
 				<p className='text-xs font-light text-gray-500 dark:text-gray-400'>

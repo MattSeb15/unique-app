@@ -1,9 +1,22 @@
+'use client'
 import Link from 'next/link'
 import FilledButton from '../buttons/filledButton'
+import ButtonFilledSubmit from '../buttons/filledSubmit'
 
 export default function LoginForm() {
+	const handleSubmit = e => {
+		e.preventDefault()
+		const email = e.target[0].value
+		const password = e.target[1].value
+		const remember = e.target[2].checked
+
+		console.log(email, password, remember)
+		e.target.reset()
+	}
+
 	return (
 		<form
+			onSubmit={e => handleSubmit(e)}
 			className='space-y-6'
 			action='#'>
 			<div>
@@ -17,8 +30,8 @@ export default function LoginForm() {
 					name='email'
 					id='email'
 					className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-					placeholder='ejemplo@ejemplo.com'
-					required=''
+					placeholder='ejemplo132@dominio.com'
+					required
 				/>
 			</div>
 			<div>
@@ -33,7 +46,7 @@ export default function LoginForm() {
 					id='password'
 					placeholder='••••••••'
 					className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-					required=''
+					required
 				/>
 			</div>
 			<div className='flex items-center justify-between gap-3'>
@@ -41,6 +54,7 @@ export default function LoginForm() {
 					<div className='flex items-center h-5'>
 						<input
 							id='remember'
+							name='remember'
 							aria-describedby='remember'
 							type='checkbox'
 							className='w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800'
@@ -57,8 +71,9 @@ export default function LoginForm() {
 				</div>
 			</div>
 
+			<ButtonFilledSubmit> Ingresar </ButtonFilledSubmit>
 			<FilledButton
-				text='Ingresar'
+				text='Ingresar dev mode'
 				href='/u'
 			/>
 

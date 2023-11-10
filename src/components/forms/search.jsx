@@ -1,23 +1,17 @@
 'use client'
 
-import React, { useEffect } from 'react'
-
 export default function SearchForm({
 	searchLabel = 'Buscar',
 	formId = 's-form',
 	searchPlaceholder = 'Buscar...',
 }) {
-	useEffect(() => {
-		const searchForm = document.querySelector('form')
-
-		searchForm.addEventListener('submit', e => {
-			e.preventDefault()
-			console.log(e.target[0].value)
-		})
-	}, [])
+	const handleSubmit = e => {
+		e.preventDefault()
+		console.log(e.target[0].value)
+	}
 
 	return (
-		<form>
+		<form onSubmit={e => handleSubmit(e)}>
 			<label
 				htmlFor={formId}
 				className='mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white'>

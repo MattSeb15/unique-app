@@ -44,12 +44,13 @@ html {
 	);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#234465", GradientType=1);
 } */
-input {
+input,
+select,
+textarea,
+button {
 	outline: none;
 }
-select {
-	outline: none;
-}
+
 a {
 	font-weight: 500;
 	text-decoration: inherit;
@@ -211,4 +212,22 @@ a:hover {
 
 .pricy-border {
 	border: 1px solid goldenrod;
+}
+
+.custom-scrollbar-comments {
+	scrollbar-width: auto;
+	scrollbar-color: #535353b4 #ffffff;
+}
+/* Chrome, Edge, and Safari */
+.custom-scrollbar-comments::-webkit-scrollbar {
+	width: 5px;
+}
+
+/* .custom-scrollbar-comments::-webkit-scrollbar-track {
+	background: #ffffff;
+} */
+
+.custom-scrollbar-comments::-webkit-scrollbar-thumb {
+	background-color: #535353b4;
+	border-radius: 10px;
 }

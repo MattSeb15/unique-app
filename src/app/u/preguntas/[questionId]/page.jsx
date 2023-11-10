@@ -4,6 +4,7 @@ import VoteButtons from '@/components/buttons/questions/voteButtons'
 import RelatedQuestionsCard from '@/components/cards/questions/relatedQuestions'
 import LiTagCard from '@/components/cards/questions/tag'
 import UserCardQuestion from '@/components/cards/questions/userCardQuestion'
+import FormComment from '@/components/forms/comment'
 import ArrowFatDown from '@/components/icons/arrows/fatDown'
 import ArrowFatUp from '@/components/icons/arrows/fatUp'
 /* import ArrowIconLeft from '@/components/icons/arrows/left' */
@@ -113,6 +114,12 @@ export default function SingleQuestionPage({ params }) {
 						<div className='text-xs text-blue-500 mt-1'>
 							Mostrar más comentarios
 						</div>
+						<FormComment
+							formId='comment'
+							taInitialRows={2}
+							taMinRows={2}
+							taMaxRows={7}
+						/>
 					</div>
 					{/* <hr className='bg-gray-400 border-none rounded-full h-[2px]' /> */}
 
