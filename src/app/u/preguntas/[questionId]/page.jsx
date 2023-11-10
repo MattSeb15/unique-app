@@ -1,3 +1,6 @@
+import FavoriteButton from '@/components/buttons/questions/favoriteButton'
+import OptionsButtons from '@/components/buttons/questions/optionsButtons'
+import VoteButtons from '@/components/buttons/questions/voteButtons'
 import RelatedQuestionsCard from '@/components/cards/questions/relatedQuestions'
 import LiTagCard from '@/components/cards/questions/tag'
 import UserCardQuestion from '@/components/cards/questions/userCardQuestion'
@@ -6,9 +9,8 @@ import ArrowFatUp from '@/components/icons/arrows/fatUp'
 /* import ArrowIconLeft from '@/components/icons/arrows/left' */
 import QuestionsFavoriteIcon from '@/components/icons/questions/favorite'
 import ToolsIconAdd from '@/components/icons/tools/add'
-import ToolsIconEdit from '@/components/icons/tools/edit'
-import ToolsIconNotification from '@/components/icons/tools/notification'
-import ToolsIconShare from '@/components/icons/tools/share'
+import ToolsIconCheck from '@/components/icons/tools/check'
+import InfoText from '@/components/text/questions/infoText'
 import Link from 'next/link'
 /* import Link from 'next/link' */
 
@@ -19,24 +21,10 @@ export default function SingleQuestionPage({ params }) {
 				{' '}
 				<ArrowIconLeft /> Todas las preguntas{' '}
 			</Link> */}
-			<div className='flex item-center gap-2 sm:gap-5'>
+			<div className='flex item-center gap-1 sm:gap-5'>
 				<div className='flex flex-col justify-start gap-2 flex-[0.4] mt-5'>
-					<button
-						title='Esta pregunta muestra un esfuerzo de investigación; es util y claro'
-						className='hover:text-green-400 flex justify-center'>
-						<ArrowFatUp className='w-auto h-5 sm:h-10' />
-					</button>
-					<div className='text-center font-medium text-lg'>5</div>
-					<button
-						title='Esta pregunta no muestra ningún esfuerzo de investigación; no está claro o no es útil'
-						className='hover:text-red-600 flex justify-center'>
-						<ArrowFatDown className='w-auto h-5 sm:h-10' />
-					</button>
-					<button
-						title='Guardar esta pregunta'
-						className='text-gray-500 hover:text-amber-300 flex justify-center'>
-						<QuestionsFavoriteIcon className='w-auto h-5 sm:h-7 mt-3' />
-					</button>
+					<VoteButtons />
+					<FavoriteButton />
 				</div>
 				<div className='flex flex-col flex-[8] gap-2 mt-5'>
 					<h1 className='text-sm sm:text-xl md:text-2xl font-medium'>
@@ -51,46 +39,23 @@ export default function SingleQuestionPage({ params }) {
 						<LiTagCard href='ing'>ingeniería</LiTagCard>
 						<LiTagCard href='tel'>telecomunicaciones</LiTagCard>
 					</ul>
-					<div className='flex gap-2 sm:gap-5 mt-2'>
-						<p className='text-xs md:text-base text-gray-300'>
-							<span className='text-gray-500'>Visto </span>15
-							<span className='text-gray-500'> veces </span>{' '}
-						</p>
-						<p className='text-xs md:text-base text-gray-300'>
-							<span className='text-gray-500'>Preguntado </span>hoy
-						</p>
-						<p className='text-xs md:text-base text-gray-300'>
-							<span className='text-gray-500'>Modificado </span>hoy a las 13:00
-						</p>
+					<div className='flex justify-between'>
+						<InfoText
+							views={15}
+							asked='hoy'
+							modified='hoy a las 13:00'
+						/>
+						<OptionsButtons />
 					</div>
-					<hr className='bg-gray-400 border-none rounded-full h-[2px]' />
+					<hr className='bg-gray-700 border-none rounded-full h-px' />
 					{/* question text parser */}
-					<p className='text-gray-400 text-xs sm:text-sm '>
+					<p className='text-gray-400 text-xs sm:text-sm mr-0 md:mr-5 xl:mr-20 '>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
 						voluptatum! Voluptatem dolor optio dicta, maxime error, deleniti rem
 						ab fugit adipisci provident quaerat excepturi, eaque pariatur
 						architecto tempore totam impedit.
 					</p>
-					<div className='flex justify-between'>
-						<UserCardQuestion userId='Mario Pineda' />
-						<div className='flex gap-2 items-start mr-2'>
-							<button
-								title='Editar'
-								className='text-xs hover:text-white/50'>
-								<ToolsIconEdit className='h-auto w-5' />
-							</button>
-							<button
-								title='Activar notificaciones para esta pregunta'
-								className='text-xs hover:text-white/50'>
-								<ToolsIconNotification className='h-auto w-5' />
-							</button>
-							<button
-								title='Compartir'
-								className='text-xs hover:text-white/50'>
-								<ToolsIconShare className='h-auto w-5' />
-							</button>
-						</div>
-					</div>
+					<UserCardQuestion userId='Mario Pineda' />
 					<div className='mt-6 sm:mr-10'>
 						<div className='flex justify-between'>
 							<h2 className='mb-2 text-lg'>Comentarios</h2>
@@ -156,8 +121,10 @@ export default function SingleQuestionPage({ params }) {
 						<RelatedQuestionsCard />
 					</div>
 					<div className='mt-6 sm:mr-10 flex flex-col gap-3'>
-						<div className='flex justify-between items-start'>
-							<h2 className='text-lg'>Respuestas</h2>
+						<div className='flex flex-col sm:flex-row justify-between items-start'>
+							<h2 className='text-lg'>
+								<span>2</span> Respuestas
+							</h2>
 							<select
 								name='filters'
 								id='select-filters'
@@ -167,7 +134,7 @@ export default function SingleQuestionPage({ params }) {
 								<option value='active'>Más antiguas</option>
 							</select>
 						</div>
-						<div className='mt-3 w-full bg-slate-900 rounded-lg p-2'>
+						<div className='mt-3 w-full bg-green-900/30 rounded-lg p-2'>
 							<div className='flex'>
 								<div className='flex flex-col justify-start gap-2 flex-[0.4] mt-5 mr-2'>
 									<button
@@ -189,6 +156,16 @@ export default function SingleQuestionPage({ params }) {
 								</div>
 								<div className='flex flex-col flex-[8] gap-2 mt-5 sm:mr-1'>
 									{/* TODA LA RESPUESTA ESTO ES DINÁMICO PUEDE SER CÓDIGO, TEXTO , IMÁGENES, TABLAS, TEXTO COLORES, NEGRITA, PLAYGROUNDS ETC, ETC. */}
+									<div
+										title='El dueño aprobó esta pregunta'
+										className='flex justify-start items-center w-fit px-2 gap-2 py-0.5 rounded-md  bg-green-600'>
+										<p className='text-xs sm:text-sm font-medium text-white '>
+											Respuesta aprobada
+										</p>
+										<div className='p-0.5 bg-white rounded-full'>
+											<ToolsIconCheck className='w-auto h-2 sm:h-3 my-auto text-green-700' />
+										</div>
+									</div>
 									<h3 className='text-xs sm:text-sm font-medium'>
 										Titulo de respuesta numero 1 Lorem ipsum dolor sit amet
 										consectetur adipisicing elit. Beatae magnam ducimus sint
@@ -203,6 +180,10 @@ export default function SingleQuestionPage({ params }) {
 										Eligendi qui natus cupiditate ducimus numquam tenetur
 										adipisci dolore tempore!
 									</p>
+									<UserCardQuestion
+										userId='Mario Pineda'
+										backgroundColor='bg-gray-950/60'
+									/>
 									<div className='mt-6 sm:mr-10'>
 										<div className='flex justify-between'>
 											<h4 className='mb-2 text-sm'>Comentarios</h4>

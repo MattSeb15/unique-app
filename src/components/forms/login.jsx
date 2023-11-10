@@ -57,7 +57,10 @@ export default function LoginForm() {
 				</div>
 			</div>
 
-			<FilledButton text='Ingresar' />
+			<FilledButton
+				text='Ingresar'
+				href='/u'
+			/>
 
 			<div className='flex w-full justify-between'>
 				<p className='text-xs font-light text-gray-500 dark:text-gray-400'>
