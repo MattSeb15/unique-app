@@ -24,7 +24,9 @@ export default function SingleQuestionPage({ params }) {
 			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asdasd wqdwq da
 			d qwdqw adqwdwq dqwdqd asdqw wqdasd asd qwd qwdasd qwd `,
 			user: {
+				id: '123456',
 				name: 'Mario Pineda',
+				username: 'mpinda',
 				imgUrl: 'https://randomuser.me/api/portraits/men/12.jpg',
 			},
 			votes: 124,
@@ -35,7 +37,9 @@ export default function SingleQuestionPage({ params }) {
 			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
 			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,`,
 			user: {
+				id: '789123',
 				name: 'Roberto Guerra',
+				username: 'rguerra',
 				imgUrl: 'https://randomuser.me/api/portraits/men/15.jpg',
 			},
 			votes: 0,
@@ -44,7 +48,9 @@ export default function SingleQuestionPage({ params }) {
 		{
 			content: `lore ipsum dolor sit amet c onsectetur adipisicing elit. Quisquam`,
 			user: {
+				id: '4567891',
 				name: 'Mateo Oviedo',
+				username: 'moviedo',
 				imgUrl: 'https://randomuser.me/api/portraits/men/20.jpg',
 			},
 			votes: -5,
@@ -91,7 +97,14 @@ export default function SingleQuestionPage({ params }) {
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
 						voluptatum! Voluptatem dolor optio dicta, maxime error, deleniti rem
 						ab fugit adipisci provident quaerat excepturi, eaque pariatur
-						architecto tempore totam impedit.
+						architecto tempore totam impedit. provident quaerat excepturi, eaque
+						pariatur architecto tempore totam impedit.provident quaerat
+						excepturi, eaque pariatur architecto tempore totam impedit.provident
+						quaerat excepturi, eaque pariatur architecto tempore totam
+						impedit.provident quaerat excepturi, eaque pariatur architecto
+						tempore totam impedit.provident quaerat excepturi, eaque pariatur
+						architecto tempore totam impedit.provident quaerat excepturi, eaque
+						pariatur architecto tempore totam impedit.
 					</p>
 
 					<SectionComments commentsList={commentsList} />

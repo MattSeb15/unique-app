@@ -1,7 +1,9 @@
+import Link from 'next/link'
+
 export default function CardUserComment({
-	name = '',
+	userId = '',
+	username = '',
 	imgUrl = '',
-	bgColor = '',
 }) {
 	const getTwoNameInitials = () => {
 		const names = name.split(' ')
@@ -11,11 +13,11 @@ export default function CardUserComment({
 	}
 	return (
 		<div
-			className={`flex items-center px-2 py-1 ${bgColor} w-fit text-xs font-medium rounded-md`}>
+			className={`flex items-center py-1 bg-slate-900 px-1 w-fit text-xs font-medium rounded-md`}>
 			{imgUrl && imgUrl !== '' ? (
 				<picture>
 					<img
-						className='h-6 w-6 rounded-full inline-block mr-1.5 object-cover'
+						className='h-5 w-5 rounded-full inline-block mr-1.5 object-cover'
 						src={imgUrl}
 						alt='Imagen de usuario'
 					/>
@@ -27,7 +29,11 @@ export default function CardUserComment({
 					</p>
 				</div>
 			)}
-			<p>{name}</p>
+			<Link
+				title='Ir a perfil de usuario'
+				href={`/u/usuarios/${userId}`}>
+				{username}
+			</Link>
 		</div>
 	)
 }

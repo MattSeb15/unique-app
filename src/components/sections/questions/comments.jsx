@@ -11,8 +11,7 @@ export default function SectionComments({ commentsList = [] }) {
 				<ItemComment
 					key={index}
 					commentContent={comment.content}
-					uImgUrl={comment.user.imgUrl}
-					uName={comment.user.name}
+					user={comment.user}
 					uploadDate={comment.uploadDate}
 					votes={comment.votes}
 				/>
@@ -20,8 +19,9 @@ export default function SectionComments({ commentsList = [] }) {
 
 			{commentsList.length !== 0 && (
 				<Link
+					title='Mostrar más comentarios'
 					href={''}
-					className='text-xs text-blue-500 mt-1'>
+					className='text-xs text-blue-500 mt-1 hover:underline hover:text-blue-300'>
 					Mostrar más comentarios
 				</Link>
 			)}

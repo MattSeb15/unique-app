@@ -19,7 +19,7 @@ export default function PreguntasPage({ searchParams }) {
 			.setVotes(['1', '2', '3'])
 			.setCreatedDate(Date.now()),
 		new Question()
-			.setId(1)
+			.setId(2)
 			.setOwnerId(1)
 			.setTitle('Como resolver este problema de cálculo')
 			.setIsResolved(false)
@@ -34,7 +34,7 @@ export default function PreguntasPage({ searchParams }) {
 			.setVotes(['1'])
 			.setCreatedDate(Date.now()),
 		new Question()
-			.setId(2)
+			.setId(3)
 			.setOwnerId(2)
 			.setTitle('Como calcular x de una ecuación de segundo grado')
 			.setDescription(
