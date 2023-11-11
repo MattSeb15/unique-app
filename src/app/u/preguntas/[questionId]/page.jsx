@@ -4,18 +4,54 @@ import VoteButtons from '@/components/buttons/questions/voteButtons'
 import RelatedQuestionsCard from '@/components/cards/questions/relatedQuestions'
 import LiTagCard from '@/components/cards/questions/tag'
 import UserCardQuestion from '@/components/cards/questions/userCardQuestion'
-import FormComment from '@/components/forms/comment'
 import ArrowFatDown from '@/components/icons/arrows/fatDown'
 import ArrowFatUp from '@/components/icons/arrows/fatUp'
 /* import ArrowIconLeft from '@/components/icons/arrows/left' */
 import QuestionsFavoriteIcon from '@/components/icons/questions/favorite'
 import ToolsIconAdd from '@/components/icons/tools/add'
 import ToolsIconCheck from '@/components/icons/tools/check'
+import SectionComments from '@/components/sections/questions/comments'
 import InfoText from '@/components/text/questions/infoText'
 import Link from 'next/link'
 /* import Link from 'next/link' */
 
 export default function SingleQuestionPage({ params }) {
+	const commentsList = [
+		{
+			content: `Lorem ipsum dolor sit amet c
+			onsectetur adipisicing elit. Quisquam,
+			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam asdasd wqdwq da
+			d qwdqw adqwdwq dqwdqd asdqw wqdasd asd qwd qwdasd qwd `,
+			user: {
+				name: 'Mario Pineda',
+				imgUrl: 'https://randomuser.me/api/portraits/men/12.jpg',
+			},
+			votes: 124,
+			uploadDate: Date.now() - 1800000,
+		},
+		{
+			content: `Quisquam,
+			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+			odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,`,
+			user: {
+				name: 'Roberto Guerra',
+				imgUrl: 'https://randomuser.me/api/portraits/men/15.jpg',
+			},
+			votes: 0,
+			uploadDate: Date.now() - 39813134361,
+		},
+		{
+			content: `lore ipsum dolor sit amet c onsectetur adipisicing elit. Quisquam`,
+			user: {
+				name: 'Mateo Oviedo',
+				imgUrl: 'https://randomuser.me/api/portraits/men/20.jpg',
+			},
+			votes: -5,
+			uploadDate: Date.now() - 172800000 - 31500000,
+		},
+	]
+
 	return (
 		<div className='flex flex-col flex-1 p-4 '>
 			{/* <Link href={`/u/preguntas`}>
@@ -28,7 +64,8 @@ export default function SingleQuestionPage({ params }) {
 					<FavoriteButton />
 				</div>
 				<div className='flex flex-col flex-[8] gap-2 mt-5'>
-					<h1 className='text-sm sm:text-xl md:text-2xl font-medium'>
+					<UserCardQuestion userId='Mario Pineda' />
+					<h1 className='text-sm mt-1 sm:text-xl md:text-2xl font-medium'>
 						Question title Lorem ipsum, dolor sit amet consectetur adipisicing
 						elit. Fugiat nulla nemo pariatur, consectetur officiis facilis
 						nostrum officia eaque libero quaerat inventore tempore vitae commodi
@@ -50,77 +87,15 @@ export default function SingleQuestionPage({ params }) {
 					</div>
 					<hr className='bg-gray-700 border-none rounded-full h-px' />
 					{/* question text parser */}
-					<p className='text-gray-400 text-xs sm:text-sm mr-0 md:mr-5 xl:mr-20 '>
+					<p className='text-gray-200 text-xs sm:text-sm mr-0 md:mr-5 xl:mr-20 '>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
 						voluptatum! Voluptatem dolor optio dicta, maxime error, deleniti rem
 						ab fugit adipisci provident quaerat excepturi, eaque pariatur
 						architecto tempore totam impedit.
 					</p>
-					<UserCardQuestion userId='Mario Pineda' />
-					<div className='mt-6 sm:mr-10'>
-						<div className='flex justify-between'>
-							<h2 className='mb-2 text-lg'>Comentarios</h2>
-							<button
-								title='añadir comentario'
-								className='hover:text-gray-500'>
-								<ToolsIconAdd className='w-auto h-6 mb-1' />
-							</button>
-						</div>
-						<div className='ml-5'>
-							<p className='text-xs text-start'>
-								<span className='block mb-1'>
-									Yo opino que todo eso está muy bien, siempre y cuando se
-									respete, bla bla lorem Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Velit consequatur eligendi praesentium
-									accusantium quas impedit, doloribus expedita excepturi porro
-									optio quia adipisci maxime. Perferendis debitis officiis
-									corporis possimus neque ratione!
-								</span>
-								<span className='text-gray-500'>Escrito </span>hoy a las 13:00
-								por <span className='text-gray-500'>Mario Pineda</span>
-								<span
-									title="número de votos a 'comentario útil' recibidos"
-									className='text-xs w-9 mr-2 text-orange-800 ml-1'>
-									• 124
-								</span>
-							</p>
-						</div>
-						<hr className='bg-gray-800 border-none rounded-full h-[1px] my-2 w-full' />
-						<div className='ml-5'>
-							<p className='text-xs text-start'>
-								<span className='block mb-1'>
-									<Link
-										href={'/u/usuarios/mpinda'}
-										className='text-blue-700'>
-										@MPineda
-									</Link>{' '}
-									es verdad lo bueno es que todo, bla bla lorem Lorem ipsum
-									dolor sit amet consectetur adipisicing elit. Velit consequatur
-									eligendi praesentium accusantium quas impedit, doloribus
-									expedita excepturi porro optio quia adipisci maxime.
-									Perferendis debitis officiis corporis possimus neque ratione!
-								</span>
-								<span className='text-gray-500'>Escrito </span>hoy a las 13:00
-								por <span className='text-gray-500'>Roberto Guerra</span>
-								<span
-									title="número de votos a 'comentario útil' recibidos"
-									className='text-xs w-9 text-orange-800 ml-1'>
-									• 2
-								</span>
-							</p>
-						</div>
 
-						<hr className='bg-gray-800 border-none rounded-full h-[1px] mt-2 w-full' />
-						<div className='text-xs text-blue-500 mt-1'>
-							Mostrar más comentarios
-						</div>
-						<FormComment
-							formId='comment'
-							taInitialRows={2}
-							taMinRows={2}
-							taMaxRows={7}
-						/>
-					</div>
+					<SectionComments commentsList={commentsList} />
+
 					{/* <hr className='bg-gray-400 border-none rounded-full h-[2px]' /> */}
 
 					<div className='mt-6'>

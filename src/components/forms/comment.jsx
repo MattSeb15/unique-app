@@ -21,7 +21,7 @@ export default function FormComment({
 		<div className='mt-4'>
 			<form onSubmit={e => handleSubmit(e)}>
 				<div className='w-full mb-4 rounded-lg bg-gray-800/40'>
-					<div className='px-4 py-2 rounded-t-lg bg-gray-800/40'>
+					<div className='px-4 py-2 rounded-t-lg bg-slate-800'>
 						<label
 							htmlFor={formId}
 							className='sr-only'>
