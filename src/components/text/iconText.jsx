@@ -11,7 +11,7 @@ export default function IconText({
 				rowReverse ? 'flex-row-reverse justify-end' : 'flex-row'
 			} gap-1 items-center text-${color}`}>
 			{children}
-			<p className={textClass}> {text} </p>
+			<p className={`${textClass} text-xs`}> {text} </p>
 		</div>
 	)
 }

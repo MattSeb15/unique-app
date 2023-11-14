@@ -25,7 +25,7 @@ export default function RelatedQuestionItem({
 					{question}
 				</Link>
 			</div>
-			<hr className='bg-gray-800/40 border-none rounded-full h-[2px] my-px w-full' />
+			<hr className='bg-gray-700 border-none rounded-full h-[2px] my-px w-full' />
 		</>
 	)
 }

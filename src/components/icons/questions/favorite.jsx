@@ -6,13 +6,10 @@ export default function QuestionsFavoriteIcon(props) {
 			height='1em'
 			viewBox='0 0 256 256'
 			{...props}>
-			<g fill='currentColor'>
-				<path
-					d='M192 48v176l-64-40l-64 40V48a8 8 0 0 1 8-8h112a8 8 0 0 1 8 8Z'
-					opacity='.2'
-				/>
-				<path d='M184 32H72a16 16 0 0 0-16 16v176a8 8 0 0 0 12.24 6.78L128 193.43l59.77 37.35A8 8 0 0 0 200 224V48a16 16 0 0 0-16-16Zm0 177.57l-51.77-32.35a8 8 0 0 0-8.48 0L72 209.57V48h112Z' />
-			</g>
+			<path
+				fill='currentColor'
+				d='M184 34H72a14 14 0 0 0-14 14v176a6 6 0 0 0 9.18 5.09l60.81-38l60.83 38A6 6 0 0 0 198 224V48a14 14 0 0 0-14-14Zm2 179.17l-54.83-34.26a6 6 0 0 0-6.36 0L70 213.17V48a2 2 0 0 1 2-2h112a2 2 0 0 1 2 2Z'
+			/>
 		</svg>
 	)
 }

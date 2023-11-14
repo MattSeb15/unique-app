@@ -12,10 +12,10 @@ export default function ITextHead({ links = [] }) {
 				<Link
 					key={link.id}
 					href={link.href}
-					className={`px-4 py-2 rounded-xl text-base hover:bg-slate-800 hover:text-white ${
+					className={`px-4 py-2 rounded-xl text-lg hover:bg-slate-800 hover:text-white ${
 						getIsActive(link.href)
-							? 'font-semibold text-white bg-slate-800'
-							: 'text-gray-400'
+							? 'font-semibold text-white '
+							: 'text-gray-400 '
 					}`}>
 					{link.text}
 				</Link>

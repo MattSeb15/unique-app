@@ -13,7 +13,7 @@ export default function CardUserComment({
 	}
 	return (
 		<div
-			className={`flex items-center py-1 bg-slate-900 px-1 w-fit text-xs font-medium rounded-md`}>
+			className={`flex items-center py-1 bg-slate-700 px-1 w-fit text-xs font-medium rounded-md`}>
 			{imgUrl && imgUrl !== '' ? (
 				<picture>
 					<img

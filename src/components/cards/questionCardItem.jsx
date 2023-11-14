@@ -9,13 +9,13 @@ import QuestionsHandCoinsIcon from '../icons/questions/handCoins'
 
 export default function QuestionCardItem({ question }) {
 	return (
-		<div className='flex w-full shadow-xl'>
+		<div className='flex w-full'>
 			<div
 				className={`flex w-full flex-col justify-center py-2 px-4 bg-slate-900 rounded-md gap-1 relative ${
 					question.isPriced ? 'pricy-border' : ''
 				}`}>
 				{/* community banner */}
-				<div className='absolute right-4 top-0 h-12 w-10 bg-white/10 shadow-md '></div>
+				{/* <div className='absolute right-4 top-0 h-12 w-10 bg-white/10 shadow-md '></div> */}
 				{question.isPriced && (
 					<IconText
 						text={question.price}

@@ -2,7 +2,7 @@ import RelatedQuestionItem from './relatedQuestionItem'
 
 export default function RelatedQuestionsCard() {
 	return (
-		<div className='p-2 bg-slate-950 rounded-md w-fit flex flex-col items-start justify-start mr-0 sm:mr-10'>
+		<div className='p-2 bg-slate-800 rounded-md w-fit flex flex-col items-start justify-start mr-0 sm:mr-10'>
 			<div className='flex flex-col items-start justify-start mt-2 gap-1'>
 				<RelatedQuestionItem
 					questionId='questionId'

@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
 					))}
 				</div>
 			</header>
-			<main className='flex sm:flex-[5]'>{children}</main>
+			<main className='flex sm:flex-[5] bg-slate-950'>{children}</main>
 			{/* <Footer /> */}
 		</body>
 	)
