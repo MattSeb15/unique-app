@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function SectionComments({ commentsList = [] }) {
 	return (
-		<div className='mt-6 sm:mr-10'>
+		<div className='mt-6'>
 			<h2 className='mb-2 text-lg'>Comentarios</h2>
 
 			{commentsList.map((comment, index) => (
@@ -26,11 +26,19 @@ export default function SectionComments({ commentsList = [] }) {
 				</Link>
 			)}
 			<FormComment
-				formId='comment'
 				taInitialRows={2}
 				taMinRows={2}
 				taMaxRows={7}
 			/>
+			<p className='ms-auto text-xs text-gray-400'>
+				Recuerda, las contribuciones a este tema deben seguir nuestras{' '}
+				<a
+					href='#'
+					className='text-blue-500 hover:underline'>
+					Directrices de la comunidad
+				</a>
+				.
+			</p>
 		</div>
 	)
 }

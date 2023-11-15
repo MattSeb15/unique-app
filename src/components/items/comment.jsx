@@ -11,7 +11,6 @@ export default function ItemComment({
 	uploadDate,
 	votes = 0,
 }) {
-	const { id, username, imgUrl } = user
 	return (
 		<div className='mb-2'>
 			<div className='px-2 py-2 bg-slate-800 rounded-md'>
@@ -38,9 +37,7 @@ export default function ItemComment({
 					<div className='flex gap-2 items-center'>
 						<CardUserComment
 							bgColor='bg-slate-800/60'
-							userId={id}
-							username={username}
-							imgUrl={imgUrl}
+							user={user}
 						/>
 						<span className='text-gray-400'>-</span>
 						<TextDateAgo

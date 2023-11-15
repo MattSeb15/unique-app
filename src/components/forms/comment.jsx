@@ -5,7 +5,7 @@ import ToolsPaperClip from '../icons/tools/paperClip'
 import TextAreaExpandibleRows from '../textArea/expandibleRows'
 
 export default function FormComment({
-	formId = '',
+	bgColor = 'bg-slate-950',
 	taInitialRows = 2,
 	taMinRows = 2,
 	taMaxRows = 10,
@@ -15,20 +15,15 @@ export default function FormComment({
 		event.preventDefault()
 		const comment = event.target[0].value
 		console.log('comment: ', comment)
+		event.target[0].value = ''
 	}
 
 	return (
 		<div className='mt-4'>
 			<form onSubmit={e => handleSubmit(e)}>
-				<div className='w-full mb-4 rounded-lg bg-slate-950'>
-					<div className='px-4 py-2 rounded-t-lg bg-slate-950'>
-						<label
-							htmlFor={formId}
-							className='sr-only'>
-							Your comment
-						</label>
+				<div className={`w-full mb-4 rounded-lg ${bgColor}`}>
+					<div className={`px-4 py-2 rounded-t-lg ${bgColor}`}>
 						<TextAreaExpandibleRows
-							id={formId}
 							placeholder={placeholder}
 							initialRows={taInitialRows}
 							minRows={taMinRows}
@@ -66,15 +61,6 @@ export default function FormComment({
 					</div>
 				</div>
 			</form>
-			<p className='ms-auto text-xs text-gray-400'>
-				Recuerda, las contribuciones a este tema deben seguir nuestras{' '}
-				<a
-					href='#'
-					className='text-blue-500 hover:underline'>
-					Directrices de la comunidad
-				</a>
-				.
-			</p>
 		</div>
 	)
 }

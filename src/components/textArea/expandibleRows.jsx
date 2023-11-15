@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useId, useState } from 'react'
 
 export default function TextAreaExpandibleRows({
 	initialRows = 2,
@@ -30,10 +30,17 @@ export default function TextAreaExpandibleRows({
 		setRows(currentRows < maxRows ? currentRows : maxRows)
 		setText(event.target.value)
 	}
+	const areaId = useId()
 
 	return (
-		<div>
+		<>
+			<label
+				for={areaId}
+				className='sr-only'>
+				{props.placeholder ?? 'Text area content'}
+			</label>
 			<textarea
+				id={areaId}
 				rows={rows}
 				value={text}
 				onChange={e => handleTextChange(e)}
@@ -41,6 +48,6 @@ export default function TextAreaExpandibleRows({
 					scrollbarWidth: 'thin',
 				}}
 				{...props}></textarea>
-		</div>
+		</>
 	)
 }

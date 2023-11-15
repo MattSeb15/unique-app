@@ -25,25 +25,6 @@ html {
 	background: #192640;
 }
 
-/* .body-bg {
-	background: rgb(0, 0, 0);
-	background: -moz-linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 1) 0%,
-		rgba(35, 68, 101, 1) 100%
-	);
-	background: -webkit-linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 1) 0%,
-		rgba(35, 68, 101, 1) 100%
-	);
-	background: linear-gradient(
-		0deg,
-		rgba(0, 0, 0, 1) 0%,
-		rgba(35, 68, 101, 1) 100%
-	);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#234465", GradientType=1);
-} */
 input,
 select,
 textarea,

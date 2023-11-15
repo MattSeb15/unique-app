@@ -21,11 +21,10 @@ export default function RelatedQuestionItem({
 				<Link
 					href={questionId}
 					title={question}
-					className='text-xs ml-2 hover:underline hover:text-white mb-1 text-overflow-2'>
+					className='text-xs ml-2 hover:underline mb-1 text-overflow-1'>
 					{question}
 				</Link>
 			</div>
-			<hr className='bg-gray-700 border-none rounded-full h-[2px] my-px w-full' />
 		</>
 	)
 }

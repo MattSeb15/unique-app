@@ -8,6 +8,7 @@ export default function SearchForm({
 	const handleSubmit = e => {
 		e.preventDefault()
 		console.log(e.target[0].value)
+		e.target.reset()
 	}
 
 	return (
